@@ -1,12 +1,28 @@
 <template>
     <div>
-        1112424124
+        <CreateComponent ref="create"></CreateComponent>
+        <IndexComponent ref="index"></IndexComponent>
     </div>
 </template>
 
 <script>
+import CreateComponent from "./CreateComponent";
+import IndexComponent from "./IndexComponent";
+
 export default {
-    name: "PostComponent"
+    name: "PostComponent",
+    components: {
+        IndexComponent,
+        CreateComponent
+    },
+    mounted() {
+
+    },
+    methods: {
+        parentLog() {
+            console.log('This is parent component log!')
+        }
+    }
 }
 </script>
 
